@@ -1,316 +1,645 @@
-    /*Tirar as margens da página*/
-    
-    body {
-        margin: 0;
-        overflow-x: hidden;
-    }
-    /*Main*/
-    
-    @media screen and (max-width: 700px) {
-        .m-banner1 {
-            padding-top: 10vh;
-            height: 80vh;
-            display: grid;
-            grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
-            grid-template-rows: 20vh 20vh 20vh;
-            background-image: url(./img/backgroundBase.jpg);
-            background-repeat: no-repeat;
-            background-position: top 10vh center;
-            background-size: 220%;
-        }
-        .m-btn-produtos {
-            grid-column: 2/5;
-            grid-row: 3;
-            justify-self: center;
-            align-self: flex-end;
-            margin-bottom: 10%;
-            min-width: 120px;
-            width: 60%;
-            height: 25px;
-            border-radius: 40px;
-            background-color: #D2C2B0;
-        }
-        .m-banner1 p {
-            font-family: 'Roboto', sans-serif;
-            color: white;
-            font-weight: 600;
-            font-size: 4vh;
+        /*Tirar as margens da página*/
+        
+        body {
             margin: 0;
+            overflow-x: hidden;
         }
-        .m-banner1 b {
-            font-size: 5vh;
-            font-weight: 800;
-            background-image: linear-gradient(#D2C2B0, #D2C2B0);
-            padding-left: 20px;
+        /*Main*/
+        
+        @media screen and (max-width: 700px) {
+            .m-banner1 {
+                padding-top: 10vh;
+                height: 80vh;
+                display: grid;
+                grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
+                grid-template-rows: 20vh 20vh 20vh;
+                background-image: url(./img/backgroundBase.jpg);
+                background-repeat: no-repeat;
+                background-position: top 10vh center;
+                background-size: 220%;
+            }
+            .m-banner1 p {
+                font-family: 'Roboto', sans-serif;
+                color: white;
+                font-weight: 600;
+                font-size: 4vh;
+                margin: 0;
+            }
+            .m-banner1 b {
+                font-size: 5vh;
+                font-weight: 800;
+                background-image: linear-gradient(#D2C2B0, #D2C2B0);
+                padding-left: 20px;
+            }
+            .m-txt-banner1 {
+                grid-row: 1;
+                grid-column: 1/4;
+                justify-self: end;
+                align-self: flex-end;
+            }
+            .m-txt-banner2 {
+                grid-row: 2;
+                grid-column: 1/4;
+                justify-self: end;
+            }
+            .m-saibaMais {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 6vh 5vh 6vh 6vh 5vh;
+                height: 30vh;
+            }
+            .m-imgCredito {
+                display: none;
+                position: absolute;
+                top: -40px;
+                right: 28%;
+                grid-row: 1;
+                grid-column: 2;
+                height: 45vh;
+            }
+            .m-saibaMais p {
+                font-family: 'Roboto', sans-serif;
+                font-weight: 600;
+                font-size: 4vh;
+                grid-column: 1;
+            }
+            .m-textStyleBlack {
+                font-size: 5vh;
+                font-weight: 900;
+                background-image: linear-gradient( black, black);
+                background-repeat: no-repeat;
+                background-position: right;
+                color: #D2C2B0;
+                padding-left: 10%;
+            }
+            .m-saibaMaisLink {
+                grid-column: 1;
+                padding-left: 10%;
+                text-decoration: none;
+                color: #1F1F24;
+                cursor: pointer;
+            }
+            .m-textStyleWhite {
+                padding-left: 10%;
+            }
+            .m-nossosServicos {
+                display: flex;
+                flex-direction: column;
+            }
+            .m-nossosServicosTexto {
+                text-align: center;
+                margin: 5vh;
+                font-family: 'Roboto', sans-serif;
+                font-size: 4vh;
+                font-weight: 900;
+            }
+            .m-servicos {
+                position: relative;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-row: 1fr 1fr;
+                justify-content: center;
+            }
+            .m-servicoCredito {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                justify-content: space-evenly;
+                width: 100%;
+                height: 100%;
+                background-color: #fff;
+                z-index: 1;
+            }
+            .m-servicoBoxLeft {
+                width: 48vw;
+                height: 48vw;
+                background-color: #ffffff;
+                margin: 2px;
+            }
+            .m-servicoCredito::before {
+                content: "";
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                height: 50%;
+                width: 50%;
+                border-left: #1F1F24 solid 2px;
+                border-top: #1F1F24 solid 2px;
+                transition: 400ms;
+                transform: scale(0);
+                transform-origin: top left;
+            }
+            .m-servicoCredito::after {
+                content: "";
+                position: absolute;
+                bottom: 5px;
+                right: 5px;
+                height: 50%;
+                width: 50%;
+                border-bottom: #1F1F24 solid 2px;
+                border-right: #1F1F24 solid 2px;
+                transition: 400ms;
+                transform: scale(0);
+                transform-origin: bottom right;
+            }
+            .m-servicoBoxRight {
+                width: 48vw;
+                height: 48vw;
+                background-color: #ffffff;
+                margin: 2px;
+            }
+            .m-servicoConsultoria {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                justify-content: space-evenly;
+                width: 100%;
+                height: 100%;
+                background-color: #fff;
+                z-index: 1;
+            }
+            .m-servicoConsultoria::before {
+                content: "";
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                height: 50%;
+                width: 50%;
+                border-left: #1F1F24 solid 2px;
+                border-top: #1F1F24 solid 2px;
+                transition: 400ms;
+                transform: scale(0);
+                transform-origin: top left;
+            }
+            .m-servicoConsultoria::after {
+                content: "";
+                position: absolute;
+                bottom: 5px;
+                right: 5px;
+                height: 50%;
+                width: 50%;
+                border-bottom: #1F1F24 solid 2px;
+                border-right: #1F1F24 solid 2px;
+                transition: 400ms;
+                transform: scale(0);
+                transform-origin: bottom right;
+            }
+            .m-credito {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                padding: 8px;
+            }
+            .m-credito i {
+                margin: 5px;
+            }
+            .m-credito i img {
+                width: 30px;
+            }
+            .m-credito h4 {
+                font-family: 'Roboto', sans-serif;
+                font-weight: 600;
+                margin: 5px;
+            }
+            .m-credito h2 {
+                font-size: 0.8em;
+                text-align: center;
+                margin: 5px;
+            }
+            .m-consultoria {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                padding: 8px;
+                margin-bottom: 13px;
+            }
+            .m-consultoria i {
+                margin-bottom: 5px;
+            }
+            .m-consultoria i img {
+                width: 58px;
+            }
+            .m-consultoria h4 {
+                font-family: 'Roboto', sans-serif;
+                font-weight: 600;
+                margin: 5px;
+            }
+            .m-consultoria h2 {
+                font-size: 0.8em;
+                text-align: center;
+                margin: 5px;
+            }
+            .m-painelTexto {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 75px 1fr;
+                justify-items: center;
+                align-items: center;
+                position: relative;
+                z-index: -1;
+                grid-row: 2;
+                grid-column: 1/3;
+            }
+            .m-seta {
+                grid-row: 1;
+                grid-column: 1;
+                width: 50px;
+                height: 50px;
+                background-color: #D2C2B0;
+                transform: rotate(45deg);
+                position: absolute;
+                top: 50px;
+                left: 44vw;
+            }
+            .m-painelTextoCredito {
+                grid-row: 2;
+                grid-column: 1/3;
+                background-color: #D2C2B0;
+                padding-top: 40px;
+                padding-bottom: 40px;
+                text-align: center;
+            }
+            .m-btn-simulacao {
+                position: absolute;
+                grid-column: 1/3;
+                grid-row: 2;
+                bottom: -20px;
+                justify-self: center;
+                margin-bottom: 10%;
+                min-width: 120px;
+                width: 60%;
+                height: 25px;
+                border-radius: 40px;
+                background-color: #fff;
+                z-index: 1;
+            }
+            .m-btn-simulacao a {
+                text-decoration: none;
+                color: #1F1F24;
+            }
+            .m-btn-simulacao:active {
+                background-color: #D2C2B0;
+            }
+            .m-painelTextoCredito h1 {
+                font-size: 1.2em;
+                font-weight: 600;
+            }
+            .m-painelTextoCredito p {
+                font-size: 1.2em;
+                font-weight: 300;
+                margin: 5vw;
+                padding: 5vw;
+                background-color: white;
+            }
+            .m-servicoCredito:hover {
+                background-color: #D2C2B0;
+            }
+            .m-servicoCredito:hover::after {
+                transform: scale(1);
+            }
+            .m-servicoCredito:hover::before {
+                transform: scale(1);
+            }
+            .m-servicoConsultoria:hover {
+                background-color: #D2C2B0;
+            }
+            .m-servicoConsultoria:hover::after {
+                transform: scale(1);
+            }
+            .m-servicoConsultoria:hover::before {
+                transform: scale(1);
+            }
+            .m-servicoCredito:hover~.m-painelTexto {
+                display: grid;
+            }
         }
-        .m-txt-banner1 {
-            grid-row: 1;
-            grid-column: 1/4;
-            justify-self: end;
-            align-self: flex-end;
+        
+        @media screen and (min-width: 700px) {
+            .m-banner1 {
+                padding-top: 15vh;
+                height: 90vh;
+                display: grid;
+                grid-template-columns: 25vw 25vw 25vw 25vw;
+                grid-template-rows: 20vh 20vh 20vh;
+                background-image: url(./img/backgroundBase.jpg);
+                background-repeat: no-repeat;
+                background-position: top 10vh center;
+                background-size: 100%;
+                column-gap: 40px;
+            }
+            .m-banner1 p {
+                font-family: 'Roboto', sans-serif;
+                color: white;
+                font-weight: 600;
+                font-size: 6vh;
+                margin: 0;
+            }
+            .m-banner1 b {
+                font-size: 8vh;
+                font-weight: 800;
+                background-image: linear-gradient(#D2C2B0, #D2C2B0);
+                padding-left: 20px;
+            }
+            .m-txt-banner1 {
+                grid-row: 1;
+                grid-column: 1/3;
+                justify-self: end;
+                align-self: flex-end;
+            }
+            .m-txt-banner2 {
+                grid-row: 2;
+                grid-column: 1/3;
+                justify-self: end;
+            }
+            .m-saibaMais {
+                position: relative;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 6vh 5vh 6vh 6vh 5vh;
+                height: 60vh;
+                row-gap: 20px;
+                padding-top: 25vh;
+                margin-bottom: 25vh;
+            }
+            .m-saibaMais p {
+                font-family: 'Roboto', sans-serif;
+                font-weight: 600;
+                font-size: 6vh;
+                grid-column: 1;
+            }
+            .m-textStyleBlack {
+                font-size: 8vh;
+                font-weight: 900;
+                background-image: linear-gradient( black, black);
+                background-repeat: no-repeat;
+                background-position: right;
+                color: #D2C2B0;
+                padding-left: 20%;
+            }
+            .m-saibaMaisLink {
+                grid-column: 1;
+                padding-left: 20%;
+                text-decoration: none;
+                color: #1F1F24;
+                cursor: pointer;
+            }
+            .m-textStyleWhite {
+                padding-left: 20%;
+            }
+            .m-imgCredito {
+                position: absolute;
+                top: -40px;
+                right: 28%;
+                grid-row: 1;
+                grid-column: 2;
+                height: 45vh;
+            }
+            .m-nossosServicos {
+                display: flex;
+                flex-direction: column;
+                margin-left: 3vw;
+                margin-right: 3vw;
+            }
+            .m-nossosServicosTexto {
+                text-align: center;
+                margin: 5vh;
+                font-family: 'Roboto', sans-serif;
+                font-size: 8vh;
+                font-weight: 900;
+                text-shadow: #1F1F24 1px 40px 80px;
+                margin-bottom: 80px;
+            }
+            .m-servicos {
+                position: relative;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-row: 1fr 1fr;
+                justify-content: center;
+            }
+            .m-servicoCredito {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                justify-content: space-evenly;
+                width: 100%;
+                height: 100%;
+                background-color: #fff;
+                z-index: 1;
+            }
+            .m-servicoBoxLeft {
+                width: 48vw;
+                height: 25vw;
+                background-color: #ffffff;
+                margin: 2px;
+                grid-row: 1;
+                grid-column: 1;
+            }
+            .m-servicoCredito::before {
+                content: "";
+                position: absolute;
+                top: 15px;
+                left: 15px;
+                height: 50%;
+                width: 50%;
+                border-left: #1F1F24 solid 2px;
+                border-top: #1F1F24 solid 2px;
+                transition: 400ms;
+                transform: scale(0);
+                transform-origin: top left;
+            }
+            .m-servicoCredito::after {
+                content: "";
+                position: absolute;
+                bottom: 15px;
+                right: 15px;
+                height: 50%;
+                width: 50%;
+                border-bottom: #1F1F24 solid 2px;
+                border-right: #1F1F24 solid 2px;
+                transition: 400ms;
+                transform: scale(0);
+                transform-origin: bottom right;
+            }
+            .m-servicoBoxRight {
+                width: 48vw;
+                height: 25vw;
+                background-color: #ffffff;
+                margin: 2px;
+                grid-column: 2;
+                grid-row: 1;
+            }
+            .m-servicoConsultoria {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                justify-content: space-evenly;
+                width: 100%;
+                height: 100%;
+                background-color: #fff;
+                z-index: 1;
+            }
+            .m-servicoConsultoria::before {
+                content: "";
+                position: absolute;
+                top: 15px;
+                left: 15px;
+                height: 50%;
+                width: 50%;
+                border-left: #1F1F24 solid 2px;
+                border-top: #1F1F24 solid 2px;
+                transition: 400ms;
+                transform: scale(0);
+                transform-origin: top left;
+            }
+            .m-servicoConsultoria::after {
+                content: "";
+                position: absolute;
+                bottom: 15px;
+                right: 15px;
+                height: 50%;
+                width: 50%;
+                border-bottom: #1F1F24 solid 2px;
+                border-right: #1F1F24 solid 2px;
+                transition: 400ms;
+                transform: scale(0);
+                transform-origin: bottom right;
+            }
+            .m-credito {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                padding: 8px;
+            }
+            .m-credito i {
+                margin: 5px;
+            }
+            .m-credito i img {
+                width: 50px;
+            }
+            .m-credito h4 {
+                font-family: 'Roboto', sans-serif;
+                font-size: 1.8em;
+                font-weight: 600;
+                margin: 5px;
+            }
+            .m-credito h2 {
+                font-size: 1.5em;
+                width: 80%;
+                text-align: center;
+                margin: 5px;
+            }
+            .m-consultoria {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                padding: 8px;
+                margin-bottom: 25px;
+            }
+            .m-consultoria i {
+                margin-bottom: 5px;
+            }
+            .m-consultoria i img {
+                width: 88px;
+                padding-bottom: 5px;
+            }
+            .m-consultoria h4 {
+                font-family: 'Roboto', sans-serif;
+                font-size: 1.8em;
+                font-weight: 600;
+                margin: 5px;
+            }
+            .m-consultoria h2 {
+                font-size: 1.5em;
+                width: 80%;
+                text-align: center;
+                margin: 5px;
+            }
+            .m-painelTexto {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 75px 1fr;
+                justify-items: center;
+                align-items: center;
+                position: relative;
+                z-index: -1;
+                grid-row: 2;
+                grid-column: 1/3;
+            }
+            .m-seta {
+                grid-row: 1;
+                grid-column: 1;
+                width: 50px;
+                height: 50px;
+                background-color: #D2C2B0;
+                transform: rotate(45deg);
+                position: absolute;
+                top: 50px;
+                left: 46.4vw;
+            }
+            .m-painelTextoCredito {
+                grid-row: 2;
+                grid-column: 1/3;
+                background-color: #D2C2B0;
+                padding-top: 40px;
+                padding-bottom: 40px;
+                text-align: center;
+            }
+            .m-btn-simulacao {
+                position: absolute;
+                grid-column: 1/3;
+                grid-row: 2;
+                bottom: -20px;
+                justify-self: center;
+                margin-bottom: 5%;
+                min-width: 120px;
+                width: 22%;
+                height: 40px;
+                border-radius: 40px;
+                background-color: #fff;
+                z-index: 1;
+            }
+            .m-btn-simulacao a {
+                text-decoration: none;
+                color: #1F1F24;
+                font-size: 1.3em;
+            }
+            .m-btn-simulacao:active {
+                background-color: #D2C2B0;
+            }
+            .m-painelTextoCredito h1 {
+                font-size: 1.8em;
+                font-weight: 900;
+            }
+            .m-painelTextoCredito p {
+                font-size: 1.6em;
+                font-weight: 300;
+                margin: 5vw;
+                padding: 5vw;
+                background-color: white;
+            }
+            .m-servicoCredito:hover {
+                background-color: #D2C2B0;
+            }
+            .m-servicoCredito:hover::after {
+                transform: scale(1);
+            }
+            .m-servicoCredito:hover::before {
+                transform: scale(1);
+            }
+            .m-servicoConsultoria:hover {
+                background-color: #D2C2B0;
+            }
+            .m-servicoConsultoria:hover::after {
+                transform: scale(1);
+            }
+            .m-servicoConsultoria:hover::before {
+                transform: scale(1);
+            }
+            .m-servicoCredito:hover~.m-painelTexto {
+                display: grid;
+            }
         }
-        .m-txt-banner2 {
-            grid-row: 2;
-            grid-column: 1/4;
-            justify-self: end;
-        }
-        .m-saibaMais {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 6vh 5vh 6vh 6vh 5vh;
-            height: 30vh;
-        }
-        .m-saibaMais p {
-            font-family: 'Roboto', sans-serif;
-            font-weight: 600;
-            font-size: 4vh;
-            grid-column: 1;
-        }
-        .m-textStyleBlack {
-            font-size: 5vh;
-            font-weight: 900;
-            background-image: linear-gradient( black, black);
-            background-repeat: no-repeat;
-            background-position: right;
-            color: #D2C2B0;
-            padding-left: 10%;
-        }
-        .m-saibaMaisLink {
-            grid-column: 1;
-            padding-left: 10%;
-            text-decoration: none;
-            color: #1F1F24;
-            cursor: pointer;
-        }
-        .m-textStyleWhite {
-            padding-left: 10%;
-        }
-        .m-nossosServicos {
-            display: flex;
-            flex-direction: column;
-        }
-        .m-nossosServicosTexto {
-            text-align: center;
-            margin: 5vh;
-            font-family: 'Roboto', sans-serif;
-            font-size: 4vh;
-            font-weight: 900;
-        }
-        .m-servicos {
-            position: relative;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-row: 1fr 1fr;
-            justify-content: center;
-        }
-        .m-servicoCredito {
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            justify-content: space-evenly;
-            width: 100%;
-            height: 100%;
-            background-color: #fff;
-            z-index: 1;
-        }
-        .m-servicoBoxLeft {
-            width: 48vw;
-            height: 48vw;
-            background-color: #ffffff;
-            margin: 2px;
-        }
-        .m-servicoCredito::before {
-            content: "";
-            position: absolute;
-            top: 5px;
-            left: 5px;
-            height: 50%;
-            width: 50%;
-            border-left: #1F1F24 solid 2px;
-            border-top: #1F1F24 solid 2px;
-            transition: 400ms;
-            transform: scale(0);
-            transform-origin: top left;
-        }
-        .m-servicoCredito::after {
-            content: "";
-            position: absolute;
-            bottom: 5px;
-            right: 5px;
-            height: 50%;
-            width: 50%;
-            border-bottom: #1F1F24 solid 2px;
-            border-right: #1F1F24 solid 2px;
-            transition: 400ms;
-            transform: scale(0);
-            transform-origin: bottom right;
-        }
-        .m-servicoBoxRight {
-            width: 48vw;
-            height: 48vw;
-            background-color: #ffffff;
-            margin: 2px;
-        }
-        .m-servicoConsultoria {
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            justify-content: space-evenly;
-            width: 100%;
-            height: 100%;
-            background-color: #fff;
-            z-index: 1;
-        }
-        .m-servicoConsultoria::before {
-            content: "";
-            position: absolute;
-            top: 5px;
-            left: 5px;
-            height: 50%;
-            width: 50%;
-            border-left: #1F1F24 solid 2px;
-            border-top: #1F1F24 solid 2px;
-            transition: 400ms;
-            transform: scale(0);
-            transform-origin: top left;
-        }
-        .m-servicoConsultoria::after {
-            content: "";
-            position: absolute;
-            bottom: 5px;
-            right: 5px;
-            height: 50%;
-            width: 50%;
-            border-bottom: #1F1F24 solid 2px;
-            border-right: #1F1F24 solid 2px;
-            transition: 400ms;
-            transform: scale(0);
-            transform-origin: bottom right;
-        }
-        .m-credito {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
-            padding: 8px;
-        }
-        .m-credito i {
-            margin: 5px;
-        }
-        .m-credito i img {
-            width: 30px;
-        }
-        .m-credito h4 {
-            font-family: 'Roboto', sans-serif;
-            font-weight: 600;
-            margin: 5px;
-        }
-        .m-credito h2 {
-            font-size: 0.8em;
-            text-align: center;
-            margin: 5px;
-        }
-        .m-consultoria {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
-            padding: 8px;
-            margin-bottom: 13px;
-        }
-        .m-consultoria i {
-            margin-bottom: 5px;
-        }
-        .m-consultoria i img {
-            width: 58px;
-        }
-        .m-consultoria h4 {
-            font-family: 'Roboto', sans-serif;
-            font-weight: 600;
-            margin: 5px;
-        }
-        .m-consultoria h2 {
-            font-size: 0.8em;
-            text-align: center;
-            margin: 5px;
-        }
-        .m-painelTexto {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 75px 1fr;
-            justify-items: center;
-            align-items: center;
-            position: relative;
-            z-index: -1;
-            grid-row: 2;
-            grid-column: 1/3;
-        }
-        .m-seta {
-            grid-row: 1;
-            grid-column: 1;
-            width: 50px;
-            height: 50px;
-            background-color: #D2C2B0;
-            transform: rotate(45deg);
-            position: absolute;
-            top: 50px;
-            left: 44vw;
-        }
-        .m-painelTextoCredito {
-            grid-row: 2;
-            grid-column: 1/3;
-            background-color: #D2C2B0;
-            padding-top: 40px;
-            padding-bottom: 40px;
-            text-align: center;
-        }
-        .m-btn-simulacao {
-            position: absolute;
-            grid-column: 1/3;
-            grid-row: 2;
-            bottom: -20px;
-            justify-self: center;
-            margin-bottom: 10%;
-            min-width: 120px;
-            width: 60%;
-            height: 25px;
-            border-radius: 40px;
-            background-color: #fff;
-            z-index: 1;
-        }
-        .m-btn-simulacao:active {
-            background-color: #D2C2B0;
-        }
-        .m-painelTextoCredito h1 {
-            font-size: 1.2em;
-            font-weight: 600;
-        }
-        .m-painelTextoCredito p {
-            font-size: 1.2em;
-            font-weight: 300;
-            margin: 5vw;
-            padding: 5vw;
-            background-color: white;
-        }
-        .m-servicoCredito:hover {
-            background-color: #D2C2B0;
-        }
-        .m-servicoCredito:hover::after {
-            transform: scale(1);
-        }
-        .m-servicoCredito:hover::before {
-            transform: scale(1);
-        }
-        .m-servicoConsultoria:hover {
-            background-color: #D2C2B0;
-        }
-        .m-servicoConsultoria:hover::after {
-            transform: scale(1);
-        }
-        .m-servicoConsultoria:hover::before {
-            transform: scale(1);
-        }
-        .m-servicoCredito:hover~.m-painelTexto {
-            display: grid;
-        }
-    }
