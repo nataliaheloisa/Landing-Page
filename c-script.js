@@ -7,6 +7,9 @@ function mobileMenu() {
   hamburger.classList.toggle("active");
   navMenu.classList.toggle("active");
 }
+function openNav() {
+  document.getElementById("contact").style.width = "100%";
+}
 
 const navLink = document.querySelectorAll(".c-nav-link");
 
