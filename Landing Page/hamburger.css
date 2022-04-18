@@ -10,8 +10,12 @@ li {
 }
 
 .c-header {
+    position: absolute;
+    top: 0;
+    width: 100%;
     border-bottom: 1px solid #1F1F24;
     background-color: #1F1F24;
+    z-index: 2;
 }
 
 .c-navbar {
@@ -21,6 +25,11 @@ li {
     padding-left: 5vw;
     padding-right: 5vw;
     height: 10vh;
+}
+
+.c-navbar {
+    align-items: center;
+    justify-items: center;
 }
 
 .c-navbar p img {
@@ -48,28 +57,30 @@ li {
 /* styles for the other elements*/
 
 .c-nav-menu {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    width: 50vw;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    justify-content: center;
     align-items: center;
     background-color: #1F1F24;
 }
 
 .c-nav-item {
-    margin-left: 5rem;
+    text-align: center;
 }
 
 .c-nav-link {
-    font-size: 1.6rem;
+    font-size: 1.2em;
     font-weight: 400;
     color: #D2C2B0;
     font-weight: bold;
     text-decoration: none;
+    transition: 150ms;
 }
 
 .c-nav-link:hover {
-    color: #1F1F24;
     font-weight: bolder;
-    text-shadow: 2px 2px 2px #D2C2B0;
+    font-size: 1.3em;
 }
 
 .c-nav-logo img {
@@ -80,23 +91,29 @@ li {
 /* responsiveness */
 
 @media only screen and (max-width: 700px) {
-    .c-nav-menu {
+    .c-header {
         position: fixed;
+        width: 100%;
+        top: 0;
+    }
+    .c-nav-menu {
+        position: absolute;
         left: -100%;
         top: 9vh;
-        flex-direction: column;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
         width: 100%;
         border-radius: 10px;
         text-align: center;
         transition: 0.3s;
-        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.15);
     }
     .c-nav-menu.active {
         left: 0;
     }
     .c-nav-item {
-        padding-top: 20px;
-        margin: 2rem 0;
+        height: 15vh;
+        padding-top: 6vh;
+        justify-items: center;
     }
     .c-hamburger {
         display: block;
