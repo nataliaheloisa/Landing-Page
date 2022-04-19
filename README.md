@@ -2,7 +2,7 @@
 
 - *Upfour*
 
-- As páginas início, nosso time e contato funcionam.
+- As páginas início, nosso time, contato e os ícones de redes sociais, funcionam.
 
 - A página que diz "ajuda" não funciona.
 
