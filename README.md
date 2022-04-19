@@ -7,7 +7,7 @@
 - A página que diz "ajuda" não funciona.
 
 - Abaixo segue link do surge e imagens do site:
--  grandiose-notebook.surge.sh
+-  http://grandiose-notebook.surge.sh
 
 
 
