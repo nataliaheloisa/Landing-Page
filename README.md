@@ -1,4 +1,6 @@
-- **Criamos o site UpFour que seria um site para empréstimo para pessoas de baixa renda. Deixamos o site responsivo, assim o usuário poderá ver independente da tele em que ele está.**
+<h1 align="center"> :computer:  Landing Page </h1>
+
+- Criamos o site UpFour que seria um site para empréstimo para pessoas de baixa renda. Deixamos o site responsivo, assim o usuário poderá ver independente da tele em que ele está.
 
 - *Upfour*
 
@@ -7,7 +9,7 @@
 - A página que diz "ajuda" não funciona.
 
 - Abaixo segue link do surge e imagens do site:
--  http://grandiose-notebook.surge.sh
+- <a href="http://grandiose-notebook.surge.sh/"> Link do Surge 🚀 </a>
 
 
 
